@@ -5,6 +5,7 @@ import { ClipLoader } from "react-spinners";
 import { atualizar, cadastrar, listar } from "../../../services/Service";
 import type Categoria from "../../../model/Categoria";
 
+
 function FormCategoria() {
 
   const navigate = useNavigate();

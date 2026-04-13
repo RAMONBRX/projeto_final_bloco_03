@@ -28,7 +28,7 @@ function ListarCategorias() {
 
 						size={80}
 						speedMultiplier={2}
-						aria-label="Pacman-loading"
+						aria-label="Ring-loading"
 					/>
 				</div>
 			)}

@@ -25,7 +25,9 @@ function Navbar() {
 
                     
                     <div className='items-center hidden gap-4 py-4 md:flex'>
+                        <Link to="/produtos">
                         Produtos
+                        </Link>
                         <Link to="/categorias">
                         Categorias
                         </Link>
