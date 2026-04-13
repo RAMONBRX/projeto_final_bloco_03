@@ -10,15 +10,15 @@ interface CardCategoriaProps {
 function CardCategorias({categoria}: CardCategoriaProps) {
     return (
         <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-            <header className='py-2 px-6 bg-indigo-800  text-white font-bold text-2xl'>Categoria</header>
+            <header className='py-2 px-6 bg-indigo-700  text-white font-bold text-2xl'>Categoria</header>
             <p className='p-8 text-3xl bg-white h-full'>{categoria.nome}</p>
-            <div className="flex bg-indigo-800 items-center justify-center gap-2 py-2">
+            <div className="flex bg-indigo-700 items-center justify-center gap-2 py-2">
                 <Link to={`/editarcategoria/${categoria.id}`} >
-                   <PencilIcon size={32} color="#F7F7F7" className="hover:cursor-pointer"/>
+                   <PencilIcon size={32} color="#F7F7F7" className="hover:cursor-pointer  hover:fill-indigo-900"/>
                 </Link>
 
                 <Link to={`/deletarcategoria/${categoria.id}`}>
-                    <TrashIcon size={32} color="#F7F7F7" className="hover:cursor-pointer" />
+                    <TrashIcon size={32} color="#F7F7F7" className="hover:cursor-pointer hover:fill-red-700" />
                 </Link>
             </div>
         </div>
