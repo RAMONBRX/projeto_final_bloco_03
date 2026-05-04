@@ -1,53 +1,91 @@
-# React + TypeScript + Vite
+# 💊 Farmácia - Gerenciador de Produtos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação web moderna para gerenciamento de produtos e categorias de farmácia, desenvolvida com React, TypeScript e Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🎯 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Sistema completo de CRUD para gestão de produtos farmacêuticos, permitindo criar, visualizar, atualizar e deletar produtos organizados por categorias. A aplicação oferece uma interface intuitiva e responsiva para facilitar operações de inventário.
 
-## React Compiler
+## 🚀 Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** - Biblioteca para construção de interfaces
+- **TypeScript** - Tipagem estática e desenvolvimento seguro
+- **Vite** - Bundler rápido e moderno
+- **Tailwind CSS** - Estilização utilitária
+- **React Router** - Navegação entre páginas
+- **Axios** - Requisições HTTP
+- **React Spinners** - Indicadores de carregamento
+- **Phosphor Icons** - Ícones escaláveis
 
-## Expanding the ESLint configuration
+## 📋 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ Cadastro e edição de produtos  
+✅ Gerenciamento de categorias  
+✅ Listagem com busca de produtos  
+✅ Deleção de produtos e categorias  
+✅ Interface responsiva (mobile e desktop)  
+✅ Loading states durante requisições  
+✅ Validação de formulários  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Como Executar
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Pré-requisitos
+- Node.js (v16+)
+- npm ou yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Instalação
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Desenvolvimento
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
+```bash
+npm run dev
+```
+
+### Build para Produção
+
+```bash
+npm run build
+```
+
+### Preview da Build
+
+```bash
+npm run preview
+```
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/          # Componentes reutilizáveis
+│   ├── categorias/     # CRUD de categorias
+│   ├── produtos/       # CRUD de produtos
+│   ├── navbar/         # Barra de navegação
+│   └── footer/         # Rodapé
+├── model/              # Interfaces/tipos
+├── pages/              # Páginas da aplicação
+└── services/           # Requisições à API
+```
+
+## 🔗 Integração com API
+
+A aplicação consome uma API REST para gerenciar produtos e categorias. Configure a URL base da API no arquivo de serviços.
+
+## 🌐 Deploy
+
+A aplicação está hospedada e disponível em:
+
+🔗 **[https://farmacia-do-ramon.vercel.app](https://farmacia-do-ramon.vercel.app)**
+
+Deploy realizado no Vercel com integração contínua (CI/CD).
+
+## 📝 Licença
+
+Este projeto foi desenvolvido como projeto final do Bootcamp Generation.
 import reactDom from 'eslint-plugin-react-dom'
 
 export default defineConfig([
